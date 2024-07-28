@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<table class="table table-striped w-50 mx-auto mt-5">
+    <thead>
+        <tr>
+            <th>ism</th>
+            <th>familya</th>
+            <th>telefon raqam</th>
+            <th>adress</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for user in users %}
+        <tr>
+            <th>{{user.fname}}</th>
+            <th>{{user.lname}}</th>
+            <th>{{user.phone_number}}</th>
+            <th>{{user.adress}}</th>
+        </tr>
+    {% endfor %}
+<tr>
+        <th><a href="#" download="../" class="btn btn-primary">download table</a></th>
+</tr>
+    </tbody>
+</table>
+
+{% endblock content %}
